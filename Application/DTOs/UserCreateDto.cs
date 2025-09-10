@@ -4,21 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.DTOs
 {
-    public class User
+    public class UserCreateDto
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; } 
-        public string LastName { get; set; } 
+        public string FirstName { get; set; } = null!;
+        public string LastName { get; set; } = null!;
         public char Gender { get; set; }
         public DateTime DOB { get; set; }
-        public string PasswordHash { get; set; }   
-        public bool IsAccountLocked { get; set; }
+        public string Password { get; set; } = null!;
+        public bool IsAccountLock { get; set; }
         public bool IsActive { get; set; }
         public int RoleId { get; set; }
         public int OrganizationId { get; set; }
         public int CreatedBy { get; set; }
-        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
     }
 }
