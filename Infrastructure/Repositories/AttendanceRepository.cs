@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    public interface IUserRepository : IGenericRepository<User>
+    public class AttendanceRepository : IAttendanceRepository
     {
-        Task<User?> GetUserWithRoleAsync(int userId);
-        Task<IEnumerable<User>> GetUsersByOrganizationAsync(int orgId);
+        
     }
 }

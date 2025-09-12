@@ -19,7 +19,7 @@ namespace Application.Mappings
             CreateMap<UserUpdateDto, User>();
 
             CreateMap<User, UserResponseDto>()
-                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"))
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"));
                 //.ForMember(dest => dest.Role, opt => opt.MapFrom(src => src.Role.RoleName))
                 //.ForMember(dest => dest.Organization, opt => opt.MapFrom(src => src.Organization.Name));
         }
